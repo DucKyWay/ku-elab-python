@@ -10,11 +10,19 @@ for i in fat:
             break
         else:
             new += i
-c = 0
+            
+c, a = 0, 0
 for i in mot:
-    if c >= 1:
+    if i in 'aeiou': a += 1
+if a != 0:
+    for i in mot:
+        if c >= 1:
+            new += i
+        else:
+            if i in 'aeiou':
+                c += 1
+else:
+    for i in mot:
         new += i
-    else:
-        if i in 'aeiou':
-            c += 1
+
 print(new)
