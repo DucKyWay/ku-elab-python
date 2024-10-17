@@ -1,6 +1,6 @@
 para = {}
 
-print("Enter eqiables and values:")
+print("Enter variables and values:")
 while True:
     txt = input()
     if txt == '-1': break
