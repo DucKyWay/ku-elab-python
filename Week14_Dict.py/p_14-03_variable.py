@@ -13,8 +13,8 @@ print("Enter your program:")
 while True:
     txt = input()
     if txt == '-1': break
-    for i in para:
-        txt = txt.replace("{"+i+"}", para[i])
+    for eq in para:
+        txt = txt.replace("{"+eq+"}", para[eq])
     ls.append(txt)
 
 print("Result:")
