@@ -3,17 +3,18 @@ order = 0
 while True:
     bid = input()
     if bid == 'end': break
-    elif bid == '': continue
+    elif bid == '':  continue
     name, price = bid.split(" ")
     price = float(price)
     
     if name not in history:
         history[name] = {"price": 0, "time": 0, "order": 0}
-        
-    history[name]["price"] = price
+
+    if price > history[name]["price"]:
+        history[name]["price"] = price
+        history[name]["order"] = order 
     history[name]["time"] += 1
     order += 1
-    history[name]["order"] = order
 
 history = dict(sorted(history.items()))
 # kong bid at the price of 300.0 baht in 2 times.
